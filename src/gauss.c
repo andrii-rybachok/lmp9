@@ -4,7 +4,11 @@ int eliminate(Matrix *mat, Matrix *b) {
     if (mat->r != mat->c || mat->r != b->r) {
         return 2; // Błąd nieprawidłowych rozmiarów macierzy
     }
-
+    for (int i = 0; i < mat->r; i++)
+    {
+        
+    }
+    
     for (int k = 0; k < mat->r - 1; k++) {
         for (int i = k + 1; i < mat->r; i++) {
             if (mat->data[k][k] == 0) {
