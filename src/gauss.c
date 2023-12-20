@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
 int eliminate(Matrix *mat, Matrix *b) {
     if (mat->r != mat->c || mat->r != b->r) {
         return 2; // Błąd nieprawidłowych rozmiarów macierzy
