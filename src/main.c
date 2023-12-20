@@ -20,8 +20,20 @@ int main(int argc, char ** argv) {
 	x = createMatrix(b->r, 1);
 	if (x != NULL) {
 		res = backsubst(x,A,b);
-
-		printToScreen(x);
+		switch (res)
+		{
+			case 0:
+				printToScreen(x);
+				break;
+			case 1:
+				printf("Blad dzielenia przez 0 (element na diagonali = 0)");
+				break;
+			case 2:
+				printf("Blad nieprawidlowych rozmiarow macierzy");
+				break;
+			default:
+				break;
+		}
 	  freeMatrix(x);
 	} else {
 					fprintf(stderr,"Błąd! Nie mogłem utworzyć wektora wynikowego x.\n");
